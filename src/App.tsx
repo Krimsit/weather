@@ -1,25 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Layout } from "antd"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+import { GeoProvider } from "./context/GeoManager"
+
+import { Header, Main } from "./container"
+import {Temperature, Weather, CurrentTime} from './modules';
+
+import { GlobalStyle, Content } from "./App.styles"
+
+const App = () => {
+    return (
+        <GeoProvider>
+            <GlobalStyle />
+            <Layout style={{ height: "100%" }}>
+                <Header />
+                <Main>
+                    <Content>
+                        <CurrentTime />
+                        <Weather />
+                        <Temperature />
+                    </Content>
+                </Main>
+            </Layout>
+        </GeoProvider>
   );
 }
 
