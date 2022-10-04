@@ -39,8 +39,8 @@
     "workbox-streams": "^6.5.4"
   },
   "scripts": {
-    "production": "docker-compose -f docker-compose.production.yml up --build --force-recreate --d",
-    "develop": "docker-compose -f docker-compose.develop.yml up --build --force-recreate --d"
+    "production": "docker-compose -f docker-compose.production.yml up --build --force-recreate -d",
+    "develop": "docker-compose -f docker-compose.develop.yml up --build --force-recreate -d"
   },
   "eslintConfig": {
     "extends": [
