@@ -1,3 +1,3 @@
 export interface PointStylePros {
-    isOnline: boolean
+  isOnline: boolean;
 }

@@ -1,23 +1,26 @@
-import { Spin } from 'antd';
-import { LoadingOutlined } from '@ant-design/icons';
+import { useWeather } from '../../dto/hooks';
 
-import { useWeather } from "../../dto/hooks"
+import { Card, QueryWrapper } from '../../components';
+import { WeatherIcon } from './components';
 
-import { Card } from "../../components"
-import { WeatherIcon } from "./components"
+import { WeatherType } from './components/WeatherIcon/WeatherIcon.interface';
 
-import { WeatherType } from "./components/WeatherIcon/WeatherIcon.interface"
-
-import { Content } from "./Weather.styles"
+import { Content } from './Weather.styles';
 
 const Weather = () => {
-    const weatherQuery = useWeather()
+  const weatherQuery = useWeather();
 
-    return <Card title={weatherQuery?.data?.description} status={weatherQuery.status} css="grid-area: weather">
+  return (
+    <Card
+      title={`Ожидаемая погода - ${weatherQuery?.data?.description || ''}`}
+      css="grid-area: weather">
+      <QueryWrapper status={weatherQuery.status}>
         <Content>
-            <WeatherIcon type={weatherQuery?.data?.type as WeatherType} />
+          <WeatherIcon type={weatherQuery?.data?.type as WeatherType} />
         </Content>
+      </QueryWrapper>
     </Card>
-}
+  );
+};
 
-export default Weather
+export default Weather;

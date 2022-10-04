@@ -1,2 +1,2 @@
-export * from "./Api"
-export * from "./WeatherDetail"
+export * from './Api';
+export * from './WeatherDetail';

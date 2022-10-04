@@ -8,7 +8,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   gap: 10px 0;
-`
+`;
 
 export const Time = styled.p`
   margin: 0;
@@ -18,11 +18,11 @@ export const Time = styled.p`
   flex-direction: column;
   align-items: center;
   gap: 5px 0;
-  
+
   svg {
     font-size: 50px;
   }
-`
+`;
 
 export const Date = styled.p`
   margin: 0;
@@ -31,8 +31,8 @@ export const Date = styled.p`
   gap: 0 10px;
   font-size: 16px;
   font-weight: 400;
-  
+
   svg {
     font-size: 24px;
   }
-`
+`;

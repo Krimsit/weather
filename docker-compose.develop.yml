@@ -4,10 +4,10 @@ services:
   client:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: config/Dockerfile.develop
     ports:
       - "3000:3000"
-    container_name: weather
+    container_name: weather_develop
     env_file:
       - .env
     volumes:

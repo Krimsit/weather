@@ -1,1 +1,1 @@
-export { default as WeatherIcon} from "./WeatherIcon/WeatherIcon"
+export { default as WeatherIcon } from './WeatherIcon/WeatherIcon';

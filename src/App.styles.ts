@@ -1,18 +1,18 @@
-import styled, {createGlobalStyle} from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
 export const Content = styled.div`
   max-height: 500px;
   display: grid;
-  grid-template-areas: "time time" "weather temperature";
+  grid-template-areas: 'time time' 'weather temperature';
   gap: 50px;
   justify-content: center;
   align-items: center;
-  
+
   @media screen and (max-width: 768px) {
-    grid-template-areas: "time" "temperature" "weather";
+    grid-template-areas: 'time' 'temperature' 'weather';
     gap: 25px;
   }
-`
+`;
 
 export const GlobalStyle = createGlobalStyle`
   body,
@@ -30,4 +30,4 @@ export const GlobalStyle = createGlobalStyle`
   * {
     outline: none;
   }
-`
+`;

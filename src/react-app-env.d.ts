@@ -1,11 +1,11 @@
 /// <reference types="react-scripts" />
 
 interface Window {
-    axios: any
+  axios: any;
 }
 
 declare namespace JSX {
-    interface IntrinsicElements {
-        [elemName: string]: any;
-    }
+  interface IntrinsicElements {
+    [elemName: string]: any;
+  }
 }

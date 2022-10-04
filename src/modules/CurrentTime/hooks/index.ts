@@ -1,1 +1,1 @@
-export { default as useCurrentTime } from "./CurrentTime"
+export { default as useCurrentTime } from './CurrentTime';
