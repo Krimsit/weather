@@ -9,7 +9,6 @@ import { Loader } from './QueryWrapper.styles';
 
 const QueryWrapper: FC<LoaderWrapperProps> = ({
   children,
-  key = 'weather',
   status,
   loader = <Spin indicator={<LoadingOutlined style={{ fontSize: 24 }} spin />} />
 }) => {

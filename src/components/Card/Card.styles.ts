@@ -32,7 +32,7 @@ export const BaseCard = styled(Card)<{ css?: string }>`
   ${({ css }) => css}
 `;
 
-export const Error = styled(Result).attrs((props) => ({
+export const Error = styled(Result).attrs(() => ({
   status: 'error'
 }))`
   padding: 0;
