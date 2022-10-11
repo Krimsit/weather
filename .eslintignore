@@ -1,0 +1,5 @@
+node_modules
+build
+src/reportWebVitals.ts
+src/service-worker.ts
+src/serviceWorkerRegistration.ts

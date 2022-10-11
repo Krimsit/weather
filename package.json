@@ -12,8 +12,19 @@
     "@types/react": "^18.0.20",
     "@types/react-dom": "^18.0.6",
     "@types/styled-components": "^5.1.26",
+    "@typescript-eslint/eslint-plugin": "^5.40.0",
+    "@typescript-eslint/parser": "^5.40.0",
     "antd": "^4.23.2",
     "axios": "^0.27.2",
+    "eslint": "^8.25.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-typescript": "^3.5.1",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.31.9",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "luxon": "^3.0.4",
     "prettier": "^2.7.1",
     "react": "^18.2.0",
@@ -39,8 +50,12 @@
     "workbox-streams": "^6.5.4"
   },
   "scripts": {
-    "production": "docker-compose -f docker-compose.production.yml up --build --force-recreate -d",
-    "develop": "docker-compose -f docker-compose.develop.yml up --build --force-recreate -d"
+    "docker:production": "docker-compose -f docker-compose.production.yml up --build --force-recreate -d",
+    "docker:develop": "docker-compose -f docker-compose.develop.yml up --build --force-recreate -d",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "lint": "eslint src/*",
+    "lint:fix": "eslint src/* --fix"
   },
   "eslintConfig": {
     "extends": [

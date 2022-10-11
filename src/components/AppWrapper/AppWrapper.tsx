@@ -1,9 +1,9 @@
 import { FC } from 'react';
 
-import { QueryWrapper } from '../';
+import { Button, Result } from 'antd';
+import { QueryWrapper } from '..';
 
 import { AppWrapperProps } from './AppWrapper.interface';
-import { Button, Result } from 'antd';
 
 const AppWrapper: FC<AppWrapperProps> = ({ children, status, isError, refetch }) => {
   if (isError || status === 'error') {
